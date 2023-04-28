@@ -32,6 +32,17 @@ With **wavefile** you can:
 
 And more.
 
+## Usage as ES modules
+
+```js
+import { WaveFile } from "https://code4fukui.github.io/wavefile-es/index.js";
+
+const wav = new WaveFile();
+// Create a mono wave file, 44.1 kHz, 32-bit and 4 samples
+wav.fromScratch(1, 44100, '32', [0, -2147483, 2147483, 4]);
+// await Deno.writeFile("test.wav", wav.toBuffer());
+```
+
 ## Install
 ```
 npm install wavefile
