@@ -1,15 +1,10 @@
-# wavefile-es (forked wavefile)
-
-Copyright (c) 2017-2019 Rafael da Silva Rocha.  
-https://github.com/rochars/wavefile
-
-# wavefile
+# wavefile-es (forked [rochars/wavefile](https://github.com/rochars/wavefile))
 
 Create, read and write wav files according to the specs.
 
 - **MIT licensed**
-- **Use it in the browser (IE10+)**
-- **Use it in Node.js**
+- **Use it in the browser **
+- **Use it in Deno**
 - **Use it as a command line tool**
 - **Handle files up to 2GB**
 - **Zero dependencies**
