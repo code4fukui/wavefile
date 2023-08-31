@@ -1,4 +1,5 @@
-# wavefile
+# wavefile-es (forked wavefile)
+
 Copyright (c) 2017-2019 Rafael da Silva Rocha.  
 https://github.com/rochars/wavefile
 
@@ -32,72 +33,20 @@ With **wavefile** you can:
 
 And more.
 
-## Install
-```
-npm install wavefile
-```
-
-To use it from the [command line](#command-line), install it globally:
-```
-npm install wavefile -g
-```
-
 ## Use
 
-### Node
+### Deno / Browser / Command Line
 ```javascript
-const wavefile = require('wavefile');
-let wav = new wavefile.WaveFile();
+import { WaveFile } from "https://code4fukui.github.io/wavefile-es/index.js";
+const wav = new wavefile.WaveFile();
 ```
-or 
+
+## Example
 ```javascript
-const WaveFile = require('wavefile').WaveFile;
-let wav = new WaveFile();
-```
-or
-```javascript
-import { WaveFile } from 'wavefile';
-let wav = new WaveFile();
-```
-
-### Browser
-Use the **wavefile.js** file in the *dist* folder:
-```html
-<script src="wavefile.js"></script>
-<script>
-  var wav = new wavefile.WaveFile();
-</script>
-```
-
-Or load it from the [jsDelivr](https://cdn.jsdelivr.net/npm/wavefile) CDN:
-```html
-<script src="https://cdn.jsdelivr.net/npm/wavefile"></script>
-```
-
-Or load it from [unpkg](https://unpkg.com/wavefile):
-```html
-<script src="https://unpkg.com/wavefile"></script>
-```
-
-#### Browser compatibility
-IE10+. Should work in all modern browsers.
-
-Cross-browser tests powered by  
-<a href="https://www.browserstack.com"><img src="https://rochars.github.io/wavefile/docs/Browserstack-logo@2x.png" width="150px"/></a>
-
-
-### Command line use
-To see the available options:
-```
-wavefile --help
-```
-
-## Node.js Example
-```javascript
-const WaveFile = require('wavefile').WaveFile;
+import { WaveFile } from "https://code4fukui.github.io/wavefile-es/index.js";
 
 // Load a wav file buffer as a WaveFile object
-let wav = new WaveFile(buffer);
+const wav = new WaveFile(buffer);
 
 // Check some of the file properties
 console.log(wav.container);
@@ -106,10 +55,10 @@ console.log(wav.fmt.chunkId);
 
 // Call toBuffer() to get the bytes of the file.
 // You can write the output straight to disk:
-let wavBuffer = wav.toBuffer();
+const wavBuffer = wav.toBuffer();
 
 // Call toDataURI() to get the file as a DataURI:
-let wavDataURI = wav.toDataURI();
+const wavDataURI = wav.toDataURI();
 ```
 
 ## Table of Contents
@@ -185,7 +134,7 @@ Resolutions other than 4-bit, 8-bit, 16-bit, 24-bit, 32-bit (integer), 32-bit (f
 
 ### Read wave files
 ```javascript
-const WaveFile = require('wavefile').WaveFile;
+import { WaveFile } from "https://code4fukui.github.io/wavefile-es/index.js";
 wav = new WaveFile();
 // Read a wav file from a buffer
 wav.fromBuffer(buffer);
